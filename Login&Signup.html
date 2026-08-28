@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shopora e-commerce login and sign up page." />
+  <title>Shopora — Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Login&Signup.css" />
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="brand-panel" aria-label="Shopora introduction">
+      <div class="brand-panel__image"></div>
+      <div class="brand-panel__shade"></div>
+
+      <header class="brand-header">
+        <a class="brand" href="#" aria-label="Shopora home">
+          <span class="brand__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M5 8.5h14v10.2A1.8 1.8 0 0 1 17.2 20H6.8A1.8 1.8 0 0 1 5 18.2V8.5Z"/>
+              <path d="M8 8.5V6.8a4 4 0 0 1 8 0v1.7"/>
+            </svg>
+          </span>
+          <span>Shopora</span>
+        </a>
+      </header>
+
+      <div class="brand-copy">
+        <p class="eyebrow">YOUR EVERYDAY STORE</p>
+        <h1>Shop more.<br><span>Worry less.</span></h1>
+        <p class="brand-description">Discover trends, choose quality,<br class="desktop-only" /> and enjoy a simpler way to shop.</p>
+
+        <div class="benefits">
+          <article class="benefit">
+            <span class="benefit__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 20 6v5c0 5.2-3.4 8.7-8 10-4.6-1.3-8-4.8-8-10V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+            </span>
+            <span><strong>Secure shopping</strong><small>Your data is protected</small></span>
+          </article>
+          <article class="benefit">
+            <span class="benefit__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h11v11H3zM14 9h4l3 3v5h-7z"/><path d="M7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+            </span>
+            <span><strong>Fast delivery</strong><small>Get your orders at your doorstep</small></span>
+          </article>
+          <article class="benefit">
+            <span class="benefit__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m20 12-8 8-8-8 8-8 8 8Z"/><path d="M9.5 9.5h.01M14.5 14.5h.01"/><path d="m9 15 6-6"/></svg>
+            </span>
+            <span><strong>Best deals</strong><small>Shop the latest collections</small></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-panel__inner">
+        <div class="form-heading">
+          <p class="mobile-brand">SHOPORA</p>
+          <h2 id="formTitle">Welcome Back</h2>
+          <p id="formSubtitle">Login to continue shopping.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form is-visible" novalidate>
+          <div class="field">
+            <label for="loginEmail">Email address</label>
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>
+              </span>
+              <input id="loginEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <p class="field-error" id="loginEmailError"></p>
+          </div>
+
+          <div class="field">
+            <label for="loginPassword">Password</label>
+            <div class="input-wrap">
+              <span class="input-icon lock-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              </span>
+              <input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="6" />
+              <button class="password-toggle" type="button" data-target="loginPassword" aria-label="Show password">Show</button>
+            </div>
+            <p class="field-error" id="loginPasswordError"></p>
+          </div>
+
+          <div class="form-options">
+            <label class="check-label"><input id="rememberMe" type="checkbox" /><span class="custom-check"></span>Remember me</label>
+            <button type="button" class="text-link" id="forgotPassword">Forgot password?</button>
+          </div>
+
+          <button class="primary-btn" type="submit">Login <span aria-hidden="true">→</span></button>
+        </form>
+
+        <form id="signupForm" class="auth-form" novalidate>
+          <div class="field">
+            <label for="signupName">Full name</label>
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19c.7-3.4 3.1-5.1 6.5-5.1s5.8 1.7 6.5 5.1"/></svg>
+              </span>
+              <input id="signupName" name="name" type="text" autocomplete="name" placeholder="Your full name" required minlength="2" />
+            </div>
+            <p class="field-error" id="signupNameError"></p>
+          </div>
+
+          <div class="field">
+            <label for="signupEmail">Email address</label>
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>
+              </span>
+              <input id="signupEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <p class="field-error" id="signupEmailError"></p>
+          </div>
+
+          <div class="field">
+            <label for="signupPassword">Password</label>
+            <div class="input-wrap">
+              <span class="input-icon lock-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              </span>
+              <input id="signupPassword" name="password" type="password" autocomplete="new-password" placeholder="Create a password" required minlength="8" />
+              <button class="password-toggle" type="button" data-target="signupPassword" aria-label="Show password">Show</button>
+            </div>
+            <div class="password-strength" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <p class="strength-text" id="strengthText"></p>
+            <p class="field-error" id="signupPasswordError"></p>
+          </div>
+
+          <label class="check-label terms-label"><input id="terms" type="checkbox" required /><span class="custom-check"></span><span>I agree to the <button type="button" class="text-link">Terms &amp; Conditions</button> and Privacy Policy.</span></label>
+          <p class="field-error" id="termsError"></p>
+
+          <button class="primary-btn" type="submit">Create account <span aria-hidden="true">→</span></button>
+        </form>
+
+        <div class="divider"><span>or continue with</span></div>
+        <div class="socials" aria-label="Social sign in options">
+          <button type="button" class="social-btn" data-provider="Google">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.35 12.23c0-.7-.06-1.37-.18-2.01H12v3.8h5.24a4.48 4.48 0 0 1-1.95 2.94v2.45h3.15c1.84-1.69 2.91-4.18 2.91-7.18Z"/><path fill="#34A853" d="M12 21.67c2.63 0 4.84-.87 6.45-2.36l-3.15-2.45c-.87.58-1.98.92-3.3.92-2.54 0-4.7-1.72-5.47-4.03H3.27v2.53A9.74 9.74 0 0 0 12 21.67Z"/><path fill="#FBBC05" d="M6.53 13.75a5.86 5.86 0 0 1 0-3.5V7.72H3.27a9.73 9.73 0 0 0 0 8.56l3.26-2.53Z"/><path fill="#EA4335" d="M12 6.22c1.43 0 2.72.49 3.73 1.45l2.8-2.8C16.84 3.28 14.63 2.33 12 2.33a9.74 9.74 0 0 0-8.73 5.39l3.26 2.53C7.3 7.94 9.46 6.22 12 6.22Z"/></svg>
+            <span>Google</span>
+          </button>
+          <button type="button" class="social-btn" data-provider="Facebook">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1877F2"/><path fill="#fff" d="M13.45 19v-6h2.02l.3-2.34h-2.32V9.17c0-.68.19-1.14 1.17-1.14h1.25V5.94c-.22-.03-.99-.09-1.88-.09-1.86 0-3.14 1.14-3.14 3.24v1.57H8.74V13h2.11v6h2.6Z"/></svg>
+            <span>Facebook</span>
+          </button>
+          <button type="button" class="social-btn" data-provider="Apple">
+            <svg class="social-icon apple-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 12.54c-.02-2.12 1.73-3.15 1.81-3.2a3.9 3.9 0 0 0-3.07-1.66c-1.29-.13-2.54.77-3.2.77-.67 0-1.7-.75-2.8-.73-1.43.02-2.74.83-3.47 2.1-1.49 2.58-.38 6.37 1.06 8.46.7 1.02 1.53 2.15 2.62 2.11 1.05-.04 1.45-.68 2.73-.68 1.27 0 1.63.68 2.73.66 1.13-.02 1.84-1.03 2.53-2.06.79-1.15 1.11-2.27 1.13-2.33-.03-.01-2.05-.79-2.07-3.44ZM14.96 6.32c.58-.7.97-1.67.86-2.64-.83.03-1.83.55-2.43 1.24-.53.61-.99 1.6-.87 2.54.93.07 1.86-.47 2.44-1.14Z"/></svg>
+            <span>Apple</span>
+          </button>
+        </div>
+
+        <p class="switch-prompt" id="switchPrompt">Don't have an account? <button type="button" class="text-link" id="switchLink" data-switch="signup">Create one</button></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 Shopora. All rights reserved. <span>|</span> <a href="#">Privacy Policy</a> <a href="#">Terms &amp; Conditions</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="Login&Signup.js"></script>
+</body>
+</html>
